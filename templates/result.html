@@ -12,33 +12,18 @@
             font-family: Segoe UI;
             text-align: center;
         }
-        form {
-            text-align: center;
-            vertical-align: middle        
-        } 
-        input{
-            border-radius: 4pt;
-            border-width: 2pt;
-            border-color: rgb(221, 232, 247); 
-        }
-        button{
-            background-color: aliceblue;
-            color: darkslategray;
-            border: 2px;
-            border-color: lightsteelblue;
-            border-radius: 5px;}
         </style> 
 </head>
 <body>
     <center>
-        <h2>
-        {{hasil.nama_pokemon1}} <img src="{{hasil.url_image1}}" width="15%" height="auto" alt="hasil.nama_pokemon1">
-        <img src="http://localhost:5000/filetemp/go.png"  width="7%" height="auto">
-        {{hasil.nama_pokemon2}}<img src="{{hasil.url_image2}}" width="15%" height="auto" alt="hasil.nama_pokemon2"/>
+        <h2 style="font-weight: bold">
+        {{hasil.nama_pokemon1}} <img src="{{hasil.url_image1}}" width="10%" height="auto" alt="hasil.nama_pokemon1">
+        <img src="http://localhost:5000/filetemp/go.png"  width="5%" height="auto">
+        {{hasil.nama_pokemon2}}<img src="{{hasil.url_image2}}" width="10%" height="auto" alt="hasil.nama_pokemon2"/>
         </h2>
         <img src="data:image/png;base64,{{plot_url}}" width="40%" height="auto">
 
-        <h1>{{hasil.probabilitas}}% {{hasil.winner}} WIN!!</h1>
+        <h1 style="font-weight: bold">{{hasil.probabilitas}}% {{hasil.winner}} WIN!!</h1>
         
     <a href="/" target="_self">
         <button type="button" class="btn btn-outline-dark">
