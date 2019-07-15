@@ -40,22 +40,6 @@ pokemon2 = 'bulbasaur'
 data1 = pokemon[pokemon['Name'] == pokemon1.capitalize()][['HP','Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']].values.tolist()
 data2 = pokemon[pokemon['Name'] == pokemon2.capitalize()][['HP','Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']].values.tolist()
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-Label = ['HP', 'Attack', 'Defense', 'Sp Attack', 'Sp Defense', 'Speed', ]
-
-x = np.arange(len(Label))
-width = 0.3
-fig, ax = plt.subplots()
-bar1 = ax.bar(x - width/2, data1[0], width, label='aaa', color='pink')
-bar2 = ax.bar(x + width/2, data2[0], width, label='bbbb', color='#00688b')
-plt.xticks(ticks=x, labels=Label)
-ax.set_xticks(x)
-ax.set_xticklabels(Label)
-ax.legend()
-plt.tight_layout()
-plt.show()
-
 input_data = data1[0]
 input_data.extend(data2[0])
 print(data1[0])
